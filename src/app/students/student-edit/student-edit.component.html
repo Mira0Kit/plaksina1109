@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <form [formGroup]="studentForm">
+        <div class="form-group">
+            <label for="studentname">Имя</label>
+            <input type="text" class="form-control" formControlName="name" id="studentname" placeholder="Имя">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['name'].invalid && studentForm.controls['name'].touched">
+                Некорректное имя
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentsurname">Фамилия</label>
+            <input type="text" class="form-control" formControlName="surname" id="studentsurname" placeholder="Фамилия">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['surname'].invalid && studentForm.controls['surname'].touched">
+                Некорректная фамилия
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentpatronymic">Отчество</label>
+            <input type="text" class="form-control" formControlName="patronymic" id="studentpatronymic" placeholder="Отчество">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['patronymic'].invalid && studentForm.controls['patronymic'].touched">
+                Некорректное отчество
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentrnumber">Телефон</label>
+            <input [textMask]="{mask: numMask}" type="text" class="form-control" formControlName="number" placeholder="Телефон"
+                id="studentnumber">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['number'].invalid && studentForm.controls['number'].touched">
+                Некорректный номер телефона
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentemail">Email</label>
+            <input type="text" class="form-control" formControlName="email" placeholder="name@example.com" id="studentemail">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['email'].invalid && studentForm.controls['email'].touched">
+                Некорректный email
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentbirthdate">Дата рождения</label>
+            <input [textMask]="{mask: birthMask}" type="text" class="form-control" formControlName="birthdate" placeholder="DD.MM.YYYY">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['birthdate'].invalid && studentForm.controls['birthdate'].touched">
+                Некорректная дата
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentgroup">Группа</label>
+            <input type="text" class="form-control" formControlName="group" id="studentgroup" placeholder="Группа">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['group'].invalid && studentForm.controls['group'].touched">
+                Некорректная группа
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="studentspecialization">Направление подготовки</label>
+            <input type="text" class="form-control" formControlName="specialization" id="studentspecialization" placeholder="Направление подготовки">
+            <div class="alert alert-danger"
+                *ngIf="studentForm.controls['specialization'].invalid && studentForm.controls['specialization'].touched">
+                Некорректное отчество
+            </div>
+        </div>
+        <button class="btn btn-primary" [disabled]="studentForm.invalid" (click)="onSave()">
+            Сохранить</button>
+        <button class="btn btn-danger ml-3" *ngIf="id != null" (click)="onDelete()">
+            Удалить</button>
+    </form>
+</div>

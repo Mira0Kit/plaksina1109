@@ -1,0 +1,70 @@
+{
+  "students": [
+    {
+      "name": "Сидор",
+      "surname": "Сидоровв",
+      "patronymic": "Иванович",
+      "number": "+7(653)895-26-34",
+      "email": "sidr@mail.ru",
+      "birthdate": "09.02.1994",
+      "group": "181-325",
+      "specialization": "САПР",
+      "id": 1
+    },
+    {
+      "name": "Иван",
+      "surname": "Зимонин",
+      "patronymic": "Константинович",
+      "number": "+7(777)777-77-77",
+      "email": "xeroxtwothree@mail",
+      "birthdate": "11.12.1985",
+      "group": "181-325",
+      "specialization": "САПР",
+      "id": 2
+    },
+    {
+      "name": "Петр",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "number": "+7(124)154-23-52",
+      "email": "ivanovww@ma",
+      "birthdate": "11.01.1965",
+      "group": "181-326",
+      "specialization": "САПР",
+      "id": 3
+    },
+    {
+      "name": "Иван",
+      "surname": "Иванов",
+      "patronymic": "Иванович",
+      "number": "+7(333)333-33-33",
+      "email": "ivanovww@mail.ru",
+      "birthdate": "22.04.1955",
+      "group": "181-321",
+      "specialization": "Веб",
+      "id": 4
+    },
+    {
+      "name": "Ивана",
+      "surname": "Иваноа",
+      "patronymic": "Ивановна",
+      "number": "+7(345)464-56-57",
+      "email": "fgdf@b",
+      "birthdate": "02.04.1995",
+      "group": "181-325",
+      "specialization": "Прикладная информатика",
+      "id": 5
+    },
+    {
+      "name": "Ира",
+      "surname": "Ямковая",
+      "patronymic": "Александровна",
+      "number": "+7(465)434-55-34",
+      "email": "mail@mail.ru",
+      "birthdate": "12.08.2000",
+      "group": "201-111",
+      "specialization": "Прикладная информатика",
+      "id": 6
+    }
+  ]
+}

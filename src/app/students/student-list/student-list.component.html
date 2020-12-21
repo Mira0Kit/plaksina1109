@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mb-2 mt-2">
+            <h5>Поиск студентов</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+            <input type="text" class="form-control" placeholder="Введите группу и/или направление подготовки"
+                [(ngModel)]="searchStr">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid table-responsive-md">
+    <table id="table-id" class="table table-hover">
+        <thead class="thead-ligh">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Инициалы</th>
+                <th scope="col">Группа</th>
+                <th scope="col">Направление подготовки</th>
+                <th scope="col" class="text-right">
+                    <button class="btn btn-primary" (click)="onAddProfile()">Добавить студента</button>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students | filter : searchStr | surnameSort">
+                <th scope="row">{{student.id}}</th>
+                <td>{{student.surname}}</td>
+                <td>{{getInitials(student)}}</td>
+                <td>{{student.group}}</td>
+                <td>{{student.specialization}}</td>
+                <td class="text-right">
+                    <button class="btn btn-primary" (click)="onLinkProfile(student.id)">
+                        Редактировать
+                    </button>
+                    <button class="btn btn-danger ml-4" (click)="onDelete(student.id)">
+                        Удалить
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
