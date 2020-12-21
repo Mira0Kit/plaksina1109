@@ -11,12 +11,12 @@ export class FilterPipe implements PipeTransform {
       return students;
     }
     else {
-      let filteredWorkers = students.filter(
+      let filteredStudents = students.filter(
         (student => {
           let filt = [student.group, student.specialization, (student.group + " " + student.specialization), (student.specialization + " " + student.group)];
           return filt.some((item) => item.toLowerCase().startsWith(searchStr.toLowerCase()));
         }));
-      return filteredWorkers;
+      return filteredStudents;
     }
   }
 }
