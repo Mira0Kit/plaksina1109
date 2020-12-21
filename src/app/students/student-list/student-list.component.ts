@@ -30,7 +30,7 @@ export class StudentListComponent implements OnInit {
   }
 
   getInitials(student: Mstudent) {
-    return student.name[0] + student.surname[0];
+    return student.name[0] + student.patronymic[0];
   }
 
   onAddProfile() {
